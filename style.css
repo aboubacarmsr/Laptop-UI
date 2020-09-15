@@ -1,0 +1,182 @@
+:root{
+	--textcolor: #5f5f79;
+	--buttoncolor: #c36cbb;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Poppins, sans-serif;
+}
+
+button{
+	font-family: Poppins, sans-serif;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	height: 10vh;
+	margin: auto;
+}
+
+.logo-container, .nav-links, .cart{
+	display: flex;
+	cursor: pointer;
+}
+
+.logo{
+	font-weight: 400;
+	margin: 5px;
+}
+
+.nav-links{
+	list-style: none;
+	margin: auto;
+}
+
+.nav-link{
+	text-decoration: none;
+	margin: 4em;
+	font-size: 18px;
+	color: var(--textcolor);
+}
+
+.cover img{
+	height: 70vh;
+	filter: drop-shadow(0px 5px 3px black);
+	animation: drop 1.5s ease;
+}
+
+.presentation{
+	display: flex;
+	width: 90%;
+	margin: auto;
+	align-items: center;
+	min-height: 80vh;
+}
+
+.introduction{
+	flex: 1;
+}
+
+.cover{
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.intro-text h1{
+	font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #494964, #6f6f89);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.intro-text p{
+	margin-top: 5px;
+	font-size: 22px;
+	color: #585772;
+}
+
+.cta{
+	padding: 50px 0 0 0;
+}
+
+.cta-select{
+	border: 2px solid var(--buttoncolor);
+	background: transparent;
+	color: var(--buttoncolor);
+	width: 150px;
+	height: 50px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.cta-add{
+	border: none;
+	width: 150px;
+	height: 50px;
+	font-size: 16px;
+	background-color: var(--buttoncolor);
+	color: white;
+}
+
+.big-circle{
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0.5;
+	height: 70%;
+	z-index: -1;
+}
+
+.medium-circle{
+	position: absolute;
+	top: 25%;
+	right:20%;
+	z-index: -1;
+	opacity: 0.4;
+}
+
+.small-circle{
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+	z-index: -1;
+}
+
+.laptop-select{
+	width: 15%;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	right: 20%;
+}
+
+@keyframes drop{
+	0%{
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (max-width:1024px){
+	.presentation{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.introduction{
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h1{
+		font-size: 30px;
+	}
+	.intro-text p{
+		font-size: 18px;
+	}
+	.cta{
+		padding: 10px 0px 0px 0px;
+	}
+	.cover img{
+		height: 50vh;
+	}
+	nav{
+		width: 100%;
+	}
+	.nav-link{
+		margin: 1em;
+	}
+}
